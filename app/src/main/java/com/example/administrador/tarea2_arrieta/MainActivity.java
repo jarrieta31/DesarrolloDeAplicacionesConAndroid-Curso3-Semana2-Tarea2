@@ -1,5 +1,6 @@
 package com.example.administrador.tarea2_arrieta;
 
+import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,11 +44,20 @@ public class MainActivity extends AppCompatActivity {
                 String telefono = editTextTelefono.getText().toString();
                 String email = editTextEmail.toString();
                 String descripcion = editTextDescripcion.getText().toString();
-                String dia = dpFecha.getDayOfMonth()+"/"+(dpFecha.getMonth()+1)+"/"+dpFecha.getYear();
-                String mes;
-                String anio;
-                String msj = "Nombre: "+nombre+"\nTelefono: "+telefono+"\nFecha: "+dia;
-                Toast.makeText(MainActivity.this, msj, Toast.LENGTH_SHORT).show();
+                int[] fecha = {dpFecha.getDayOfMonth(), dpFecha.getMonth(), dpFecha.getYear()};
+
+               // String anio;
+              //  String msj = "Nombre: "+nombre+"\nTelefono: "+telefono+"\nFecha: "+dia;
+               // Toast.makeText(MainActivity.this, msj, Toast.LENGTH_SHORT).show();
+
+                Intent  intent = new Intent(MainActivity.this, Activity2.class);
+                intent.putExtra(getResources().getString(R.string.p_nombre), nombre);
+                intent.putExtra(getResources().getString(R.string.p_fecha), fecha);
+                intent.putExtra(getResources().getString(R.string.p_telefono), telefono);
+                intent.putExtra(getResources().getString(R.string.p_email), email);
+                intent.putExtra(getResources().getString(R.string.p_descripcion), descripcion);
+                startActivity(intent);
+
 
 
 

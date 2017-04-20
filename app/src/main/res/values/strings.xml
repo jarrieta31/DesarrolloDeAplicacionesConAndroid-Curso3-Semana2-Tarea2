@@ -11,4 +11,9 @@
     <string name="texto_telefono">Tel. </string>
     <string name="texto_email">Email: </string>
     <string name="texto_descripcion">Descripción: </string>
+    <string name="p_nombre">nombre</string>
+    <string name="p_telefono">telefono</string>
+    <string name="p_email">email</string>
+    <string name="p_descripcion">descripcion</string>
+    <string name="p_fecha">fecha</string>
 </resources>
