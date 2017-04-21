@@ -5,29 +5,46 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class Activity2 extends AppCompatActivity {
-
-    private TextView tvNombre = (TextView)findViewById(R.id.tvNombre);
-    private TextView tvFecha = (TextView)findViewById(R.id.tvFecha);
-    private TextView tvTelefono = (TextView)findViewById(R.id.tvTelefono);
-    private TextView tvEmail = (TextView)findViewById(R.id.tvEmail);
-    private TextView tvDescripcion = (TextView)findViewById(R.id.tvDescripción);
+    /*
+        Declaro los TextView para trabajar con ellos
+     */
+    private TextView tvNombre;
+    private TextView tvFecha;
+    private TextView tvTelefono;
+    private TextView tvEmail;
+    private TextView tvDescripcion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
 
+        /*
+            Obtengo los TextView para trabajar con ellos
+        */
+        tvNombre = (TextView)findViewById(R.id.tvNombre);
+        tvFecha = (TextView)findViewById(R.id.tvFecha);
+        tvTelefono = (TextView)findViewById(R.id.tvTelefono);
+        tvEmail = (TextView)findViewById(R.id.tvEmail);
+        tvDescripcion = (TextView)findViewById(R.id.tvDescripción);
+
+        /*
+            Recibo los datos desde MainActivty
+         */
         Bundle parametros = getIntent().getExtras();
-
         String nombre = parametros.getString(getResources().getString(R.string.p_nombre));
-
         //int[] fecha = parametros.getString(getResources().getString(R.string.p_fecha));
         String telefono = parametros.getString(getResources().getString(R.string.p_telefono));
         String email = parametros.getString(getResources().getString(R.string.p_email));
         String descripcion = parametros.getString(getResources().getString(R.string.p_descripcion));
 
-
+        /*
+            Ingreso los valores recibidos en los TextView correspondientes
+         */
         tvNombre.setText(nombre);
+        tvTelefono.setText(getResources().getString(R.string.texto_telefono) + telefono);
+        tvEmail.setText(getResources().getString(R.string.texto_email) + email);
+        tvDescripcion.setText(getResources().getString(R.string.texto_descripcion) + descripcion);
 
     }
 }

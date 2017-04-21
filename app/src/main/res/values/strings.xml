@@ -8,7 +8,7 @@
     <string name="btn_editar_datos">Editar Datos</string>
     <string name="titulo_activity2">Confirmar Datos</string>
     <string name="texto_fecha">Fecha de nacimiento: </string>
-    <string name="texto_telefono">Tel. </string>
+    <string name="texto_telefono">Tel.: </string>
     <string name="texto_email">Email: </string>
     <string name="texto_descripcion">Descripción: </string>
     <string name="p_nombre">nombre</string>

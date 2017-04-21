@@ -23,83 +23,119 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp" />
 
+    <View
+        android:id="@+id/linea1"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="83dp" />
+
     <TextView
-        android:id="@+id/tvFecha"
-        android:layout_width="0dp"
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:ignore="HardcodedText,MissingConstraints"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="24dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <View
+        android:id="@+id/linea2"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/texto_fecha"
+        android:background="@android:color/darker_gray"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/texto_fecha"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/linea2" />
+
+    <View
+        android:id="@+id/linea3"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFecha" />
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="27dp"
+        android:layout_height="17dp"
+        android:text="@string/texto_telefono"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/linea3"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <View
+        android:id="@+id/linea4"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTelefono" />
+
 
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:text="@string/texto_email"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/linea4"
+        android:layout_marginLeft="24dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvTelefono" />
+        tools:ignore="RtlHardcoded" />
+
+    <View
+        android:id="@+id/linea5"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="24dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+        tools:ignore="RtlHardcoded" />
+
 
     <TextView
         android:id="@+id/tvDescripción"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:text="@string/texto_descripcion"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/linea5"
+        tools:ignore="RtlHardcoded" />
 
-
-
-    <TextView
-        android:id="@+id/tvTelefono"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/texto_telefono"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvFecha"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
-    <TextView
-        android:id="@+id/tvNombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="TextView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        tools:ignore="HardcodedText,MissingConstraints"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/btnEditarDatos"

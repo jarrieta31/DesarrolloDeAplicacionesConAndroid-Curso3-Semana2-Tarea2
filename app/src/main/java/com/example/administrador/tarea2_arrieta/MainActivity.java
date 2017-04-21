@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnSiguiente;
     private DatePicker dpFecha;
-    private  EditText editTextNombre;
+    private EditText editTextNombre;
     private EditText editTextTelefono;
     private EditText editTextEmail;
     private EditText editTextDescripcion;
@@ -44,23 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 String telefono = editTextTelefono.getText().toString();
                 String email = editTextEmail.toString();
                 String descripcion = editTextDescripcion.getText().toString();
-                int[] fecha = {dpFecha.getDayOfMonth(), dpFecha.getMonth(), dpFecha.getYear()};
-
-               // String anio;
-              //  String msj = "Nombre: "+nombre+"\nTelefono: "+telefono+"\nFecha: "+dia;
-               // Toast.makeText(MainActivity.this, msj, Toast.LENGTH_SHORT).show();
+                //int[] fecha = {dpFecha.getDayOfMonth(), dpFecha.getMonth(), dpFecha.getYear()};
 
                 Intent  intent = new Intent(MainActivity.this, Activity2.class);
                 intent.putExtra(getResources().getString(R.string.p_nombre), nombre);
-                intent.putExtra(getResources().getString(R.string.p_fecha), fecha);
+                //intent.putExtra(getResources().getString(R.string.p_fecha), fecha);
                 intent.putExtra(getResources().getString(R.string.p_telefono), telefono);
                 intent.putExtra(getResources().getString(R.string.p_email), email);
                 intent.putExtra(getResources().getString(R.string.p_descripcion), descripcion);
                 startActivity(intent);
-
-
-
-
 
             }
         });
