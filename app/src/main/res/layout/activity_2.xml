@@ -44,7 +44,7 @@
     <View
         android:id="@+id/linea2"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/linea_layout_height"
         android:layout_marginStart="@dimen/linea_marginStart"
         android:layout_marginEnd="@dimen/linea_marginEnd"
         android:layout_marginRight="@dimen/linea_marginRigth"
@@ -85,8 +85,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFecha"
-        tools:ignore="RtlHardcoded"
-        tools:layout_marginRight="@dimen/div_marginRigth" />
+        tools:ignore="RtlHardcoded" />
 
     <TextView
         android:id="@+id/tvTelefono"
@@ -106,16 +105,16 @@
     <View
         android:id="@+id/linea4"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_height="@dimen/linea_layout_height"
+        android:layout_marginLeft="@dimen/linea_marginLeft"
+        android:layout_marginRight="@dimen/linea_marginRigth"
         android:layout_marginStart="@dimen/linea_marginStart"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="@dimen/linea_marginTop"
         android:background="@android:color/darker_gray"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTelefono"
-        android:layout_marginEnd="24dp" />
+        android:layout_marginEnd="@dimen/linea_marginEnd" />
 
 
     <TextView
@@ -168,11 +167,11 @@
     <View
         android:id="@+id/linea1"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginEnd=""
-        android:layout_marginLeft="@dimen/div_marginLeft"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="@dimen/div_marginLeft"
+        android:layout_height="@dimen/linea_layout_height"
+        android:layout_marginEnd="@dimen/linea_marginEnd"
+        android:layout_marginLeft="@dimen/linea_marginLeft"
+        android:layout_marginRight="@dimen/linea_marginRigth"
+        android:layout_marginStart="@dimen/linea_marginStart"
         android:background="@android:color/darker_gray"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -181,7 +180,7 @@
 
     <Button
         android:id="@+id/btnEditarDatos"
-        android:layout_width="150dp"
+        android:layout_width="@dimen/btn_width"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:layout_marginEnd="8dp"
