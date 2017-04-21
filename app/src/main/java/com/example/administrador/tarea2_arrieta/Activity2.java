@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class Activity2 extends AppCompatActivity {
     /*
         Declaro los TextView para trabajar con ellos
@@ -33,10 +35,14 @@ public class Activity2 extends AppCompatActivity {
          */
         Bundle parametros = getIntent().getExtras();
         String nombre = parametros.getString(getResources().getString(R.string.p_nombre));
-        //int[] fecha = parametros.getString(getResources().getString(R.string.p_fecha));
         String telefono = parametros.getString(getResources().getString(R.string.p_telefono));
         String email = parametros.getString(getResources().getString(R.string.p_email));
         String descripcion = parametros.getString(getResources().getString(R.string.p_descripcion));
+        /*
+            Recive el ArrayList fecha
+         */
+        ArrayList<Integer> fecha = (ArrayList<Integer>) getIntent().getSerializableExtra(getResources().getString(R.string.p_fecha));
+
 
         /*
             Ingreso los valores recibidos en los TextView correspondientes
@@ -45,6 +51,7 @@ public class Activity2 extends AppCompatActivity {
         tvTelefono.setText(getResources().getString(R.string.texto_telefono) + telefono);
         tvEmail.setText(getResources().getString(R.string.texto_email) + email);
         tvDescripcion.setText(getResources().getString(R.string.texto_descripcion) + descripcion);
+        tvFecha.setText(getResources().getString(R.string.texto_fecha)+fecha.get(0)+"/"+(fecha.get(1)+1)+"/"+fecha.get(2));
 
     }
 }
