@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="div_marginLeft">24dp</dimen>
-    <dimen name="div_marginRigth">24dp</dimen>
-    <dimen name="div_marginTop">4dp</dimen>
-    <dimen name="div_layoutHeight">1dp</dimen>
+    <dimen name="layout_paddingLeft">24dp</dimen>
+    <dimen name="layout_paddingRigth">24dp</dimen>
+    <dimen name="linea_marginLeft">24dp</dimen>
+    <dimen name="linea_marginRigth">24dp</dimen>
+    <dimen name="linea_marginTop">4dp</dimen>
+    <dimen name="linea_layout_height">1dp</dimen>
+    <dimen name="linea_marginStart">24dp</dimen>
+    <dimen name="linea_marginEnd">24dp</dimen>
     <dimen name="tv_marginLeft">24dp</dimen>
     <dimen name="text_size_textInput">12dp</dimen>
     <dimen name="text_size_textView">12dp</dimen>
