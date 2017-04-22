@@ -91,7 +91,7 @@
 
     <TextView
         android:id="@+id/tvTelefono"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginLeft="24dp"
@@ -121,11 +121,11 @@
 
     <TextView
         android:id="@+id/tvEmail"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/texto_email"
@@ -152,11 +152,11 @@
 
     <TextView
         android:id="@+id/tvDescripción"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/texto_descripcion"

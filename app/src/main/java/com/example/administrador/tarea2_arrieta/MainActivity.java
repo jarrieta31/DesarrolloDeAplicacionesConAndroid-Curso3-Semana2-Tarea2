@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(getResources().getString(R.string.p_email), email);
                 intent.putExtra(getResources().getString(R.string.p_descripcion), descripcion);
                 startActivity(intent);
-
+                // Finalizo la actividad para ahorar recursos
+                finish();
 
                // Toast.makeText(getApplicationContext(), "Nombre: "+nombre+"\nTelefono: "+telefono+"\nEmail: "+email+"\nDescripción: "+descripcion, Toast.LENGTH_LONG ).show();
             }

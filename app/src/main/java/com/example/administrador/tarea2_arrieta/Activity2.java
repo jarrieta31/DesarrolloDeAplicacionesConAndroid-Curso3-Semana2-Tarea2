@@ -3,6 +3,7 @@ package com.example.administrador.tarea2_arrieta;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.TextView;
 import java.util.ArrayList;
 
@@ -44,10 +45,9 @@ public class Activity2 extends AppCompatActivity {
         telefono = parametros.getString(getResources().getString(R.string.p_telefono));
         email = parametros.getString(getResources().getString(R.string.p_email));
         descripcion = parametros.getString(getResources().getString(R.string.p_descripcion));
-        /*
-            Recive el ArrayList fecha
-         */
+        //   Recive el ArrayList fecha
         fecha = (ArrayList<Integer>) getIntent().getSerializableExtra(getResources().getString(R.string.p_fecha));
+        
         /*
             Ingreso los valores recibidos en los TextView correspondientes
          */
@@ -60,7 +60,27 @@ public class Activity2 extends AppCompatActivity {
     }
 
     public void retornaDatos(){
+
         Intent intent = new Intent(Activity2.this, MainActivity.class);
-            startActivity(intent);
+        intent.putExtra(getResources().getString(R.string.p_nombre), nombre);
+        intent.putExtra(getResources().getString(R.string.p_fecha), fecha);
+        intent.putExtra(getResources().getString(R.string.p_telefono), telefono);
+        intent.putExtra(getResources().getString(R.string.p_email), email);
+        intent.putExtra(getResources().getString(R.string.p_descripcion), descripcion);
+        startActivity(intent);
+        finish();
+    }
+
+    /*
+        Sobre escribo el metodo onKeyDown, esto se hace para cuando el usuario presiona el boton Back
+    */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        // Si la tecla presionada es Back
+        if (keyCode == KeyEvent.KEYCODE_BACK){
+
+            retornaDatos();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

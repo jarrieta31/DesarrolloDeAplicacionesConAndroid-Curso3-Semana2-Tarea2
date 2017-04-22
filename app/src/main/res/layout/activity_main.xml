@@ -165,7 +165,8 @@
                 android:layout_marginTop="30dp"
                 android:text="@string/btn_siguiente"
                 android:textSize="@dimen/btn_text_size"
-                android:theme="@style/botonRaised" />
+                android:theme="@style/botonRaised"
+                tools:ignore="SpUsage" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
