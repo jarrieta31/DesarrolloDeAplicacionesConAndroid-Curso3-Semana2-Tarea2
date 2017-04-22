@@ -21,9 +21,11 @@
         android:layout_marginTop="50dp"
         android:text="@string/titulo_activity2"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="@dimen/text_titulo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
 
     <TextView
         android:id="@+id/tvNombre"
@@ -33,7 +35,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:text="TextView"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -44,7 +46,7 @@
     <View
         android:id="@+id/linea2"
         android:layout_width="0dp"
-        android:layout_height="@dimen/linea_layout_height"
+        android:layout_height="1dp"
         android:layout_marginStart="@dimen/linea_marginStart"
         android:layout_marginEnd="@dimen/linea_marginEnd"
         android:layout_marginRight="@dimen/linea_marginRigth"
@@ -74,7 +76,7 @@
     <View
         android:id="@+id/linea3"
         android:layout_width="0dp"
-        android:layout_height="@dimen/linea_layout_height"
+        android:layout_height="1dp"
         android:layout_marginEnd="@dimen/linea_marginEnd"
         android:layout_marginLeft="@dimen/linea_marginLeft"
         android:layout_marginRight="@dimen/linea_marginRigth"
@@ -105,7 +107,7 @@
     <View
         android:id="@+id/linea4"
         android:layout_width="0dp"
-        android:layout_height="@dimen/linea_layout_height"
+        android:layout_height="1dp"
         android:layout_marginLeft="@dimen/linea_marginLeft"
         android:layout_marginRight="@dimen/linea_marginRigth"
         android:layout_marginStart="@dimen/linea_marginStart"
@@ -167,7 +169,7 @@
     <View
         android:id="@+id/linea1"
         android:layout_width="0dp"
-        android:layout_height="@dimen/linea_layout_height"
+        android:layout_height="1dp"
         android:layout_marginEnd="@dimen/linea_marginEnd"
         android:layout_marginLeft="@dimen/linea_marginLeft"
         android:layout_marginRight="@dimen/linea_marginRigth"
@@ -180,20 +182,16 @@
 
     <Button
         android:id="@+id/btnEditarDatos"
-        android:layout_width="@dimen/btn_width"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="retornaDatos"
         android:text="@string/btn_editar_datos"
+        android:textSize="@dimen/btn_text_size"
         android:theme="@style/botonRaised"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linea1"
-        app:layout_constraintVertical_bias="0.503" />
+        tools:ignore="SpUsage" />
 
 </android.support.constraint.ConstraintLayout>

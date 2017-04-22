@@ -158,13 +158,14 @@
 
             <Button
                 android:id="@+id/btnSiguiente"
-                android:layout_width="@dimen/btn_width"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
                 android:layout_marginBottom="15dp"
+                android:layout_marginTop="30dp"
                 android:text="@string/btn_siguiente"
-                android:theme="@style/botonRaised"/>
+                android:textSize="@dimen/btn_text_size"
+                android:theme="@style/botonRaised" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
