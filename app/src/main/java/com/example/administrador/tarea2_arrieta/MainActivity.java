@@ -1,11 +1,13 @@
 package com.example.administrador.tarea2_arrieta;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -40,6 +42,29 @@ public class MainActivity extends AppCompatActivity {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextDescripcion = (EditText) findViewById(R.id.editTextDescripcion);
 
+        editTextNombre.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    //hideKeyboard();
+                    InputMethodManager input = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    input.hideSoftInputFromWindow(editTextNombre.getWindowToken(), 0);
+                }
+            }
+        });
+
+        editTextDescripcion.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    //hideKeyboard();
+                    InputMethodManager input = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    input.hideSoftInputFromWindow(editTextDescripcion.getWindowToken(), 0);
+                }
+            }
+        });
+
+        
         // *** Creo el bundle y verifico que no este vacio. Si no lo está, obtengo los datos y los muestro en los campos correspondientes ***
         Bundle parametros = getIntent().getExtras();
         if (parametros!=null){
